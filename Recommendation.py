@@ -7,7 +7,7 @@ movies_df = pd.read_csv('movies.csv')
 # Read ratings data
 ratings_df = pd.read_csv('ratings.csv')
 movie = ratings_df['movieId'].unique()
-user_id = np.array(int(input('User ID: ')))
+user_id = np.array(int(input('User ID from 1 to 610: ')))
 moive_seen_idx = ratings_df[(ratings_df['userId']==user_id)].index
 moive_seen = []
 movies_to_predict = []
